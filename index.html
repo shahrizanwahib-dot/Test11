@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kembara Dunia Year 9: Intermediate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Tetapan Utama untuk Saiz Besar (Projektor Mode - 1.5x) */
+        html { font-size: 24px; }
+        body { font-family: 'Quicksand', sans-serif; background-color: #ffffff; overflow-x: hidden; }
+        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        .hidden-section { display: none; }
+        .active-section { display: block; animation: fadeIn 0.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        select, input { border: 2px solid #e2e8f0; transition: border-color 0.2s; font-size: 1rem; }
+        select:focus, input:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); }
+        .correct { border-color: #22c55e; background-color: #f0fdf4; color: #15803d; }
+        .wrong { border-color: #ef4444; background-color: #fef2f2; color: #b91c1c; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm w-full">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="showSection('intro')">
+                <span class="text-3xl">🌍</span>
+                <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-600">Vlog Kembara (Year 9)</h1>
+            </div>
+            <div class="hidden md:flex space-x-3 text-base font-bold">
+                <button onclick="showSection('intro')" class="px-4 py-2 rounded-full hover:bg-gray-100 text-gray-600">🏠 Mula</button>
+                <button onclick="showSection('stesen1')" class="px-4 py-2 rounded-full hover:bg-blue-50 text-blue-600">🌦️ Cuaca</button>
+                <button onclick="showSection('stesen2')" class="px-4 py-2 rounded-full hover:bg-orange-50 text-orange-600">🤝 Budaya</button>
+                <button onclick="showSection('stesen3')" class="px-4 py-2 rounded-full hover:bg-teal-50 text-teal-600">🏙️ Hidup</button>
+                <button onclick="showSection('stesen4')" class="px-4 py-2 rounded-full hover:bg-purple-50 text-purple-600">✈️ Cuti</button>
+            </div>
+            <div class="fixed bottom-2 right-2 text-[12px] text-gray-300 pointer-events-none z-50">Tekan 'F' untuk Fullscreen</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full">
+
+        <!-- INTRO -->
+        <section id="intro" class="active-section text-center py-12 px-6">
+            <h2 class="text-6xl font-bold text-gray-900 mb-6">Jelajah Dunia: Year 9</h2>
+            <p class="text-2xl text-gray-500 mb-12">Latihan Interaktif: Kosa Kata, Pemahaman & Bina Ayat</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <div onclick="showSection('stesen1')" class="bg-blue-50 p-8 rounded-3xl cursor-pointer hover:bg-blue-100 transition border border-blue-200 shadow-sm hover:shadow-md">
+                    <h3 class="text-3xl font-bold text-blue-700">1. Cuaca Dunia</h3>
+                </div>
+                <div onclick="showSection('stesen2')" class="bg-orange-50 p-8 rounded-3xl cursor-pointer hover:bg-orange-100 transition border border-orange-200 shadow-sm hover:shadow-md">
+                    <h3 class="text-3xl font-bold text-orange-700">2. Budaya</h3>
+                </div>
+                <div onclick="showSection('stesen3')" class="bg-teal-50 p-8 rounded-3xl cursor-pointer hover:bg-teal-100 transition border border-teal-200 shadow-sm hover:shadow-md">
+                    <h3 class="text-3xl font-bold text-teal-700">3. Kehidupan</h3>
+                </div>
+                <div onclick="showSection('stesen4')" class="bg-purple-50 p-8 rounded-3xl cursor-pointer hover:bg-purple-100 transition border border-purple-200 shadow-sm hover:shadow-md">
+                    <h3 class="text-3xl font-bold text-purple-700">4. Percutian</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- STESEN 1: CUACA DUNIA -->
+        <section id="stesen1" class="hidden-section w-full bg-white pb-24">
+            <div class="bg-blue-600 text-white py-10 px-6 text-center shadow-lg">
+                <h2 class="text-5xl font-bold">Stesen 1: Cuaca Dunia</h2>
+            </div>
+            <div class="max-w-[95rem] mx-auto p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="space-y-10">
+                        <!-- Bhg A: Vocab -->
+                        <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-200">
+                            <h3 class="text-2xl font-bold text-blue-600 mb-6 border-b-2 border-blue-100 pb-3">Bahagian A: Kosa Kata Cuaca</h3>
+                            <div class="space-y-4 text-lg">
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">1.</span> Musim sejuk ada <select id="s1-1" class="p-2 rounded bg-gray-50 font-bold text-blue-700"><option>.</option><option value="salji">salji</option><option value="pasir">pasir</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">2.</span> Tiada hujan lama: <select id="s1-2" class="p-2 rounded bg-gray-50 font-bold text-blue-700"><option>.</option><option value="kemarau">kemarau</option><option value="banjir">banjir</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">3.</span> Angin kencang & hujan: <select id="s1-3" class="p-2 rounded bg-gray-50 font-bold text-blue-700"><option>.</option><option value="ribut">ribut</option><option value="panas">panas</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">4.</span> Udara rasa basah: <select id="s1-4" class="p-2 rounded bg-gray-50 font-bold text-blue-700"><option>.</option><option value="lembap">lembap</option><option value="kering">kering</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">5.</span> Ukuran panas/sejuk: <select id="s1-5" class="p-2 rounded bg-gray-50 font-bold text-blue-700"><option>.</option><option value="suhu">suhu</option><option value="meter">meter</option></select>.</div>
+                            </div>
+                        </div>
+                        <!-- Bhg B: Banding -->
+                        <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-200">
+                            <h3 class="text-2xl font-bold text-blue-600 mb-6 border-b-2 border-blue-100 pb-3">Bahagian B: Perbandingan (Comparative)</h3>
+                            <div class="space-y-4 text-lg">
+                                <div class="flex justify-between items-center"><span class="flex-1">6. Jepun ______ daripada Malaysia. (sejuk)</span> <select id="s1-6" class="p-2 rounded bg-gray-50 font-bold text-blue-700"><option>.</option><option value="lebih sejuk">lebih sejuk</option><option value="paling sejuk">paling sejuk</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">7. Gurun Sahara tempat ______. (panas)</span> <select id="s1-7" class="p-2 rounded bg-gray-50 font-bold text-blue-700"><option>.</option><option value="paling panas">paling panas</option><option value="lebih panas">lebih panas</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">8. London ______ daripada Dubai. (basah)</span> <select id="s1-8" class="p-2 rounded bg-gray-50 font-bold text-blue-700"><option>.</option><option value="lebih basah">lebih basah</option><option value="paling basah">paling basah</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">9. Musim bunga ______ musim gugur. (cantik)</span> <select id="s1-9" class="p-2 rounded bg-gray-50 font-bold text-blue-700"><option>.</option><option value="secantik">secantik</option><option value="lebih cantik">lebih cantik</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">10. Salji ______ daripada ais. (lembut)</span> <select id="s1-10" class="p-2 rounded bg-gray-50 font-bold text-blue-700"><option>.</option><option value="lebih lembut">lebih lembut</option><option value="paling lembut">paling lembut</option></select></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bhg C: Bina Ayat -->
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-200 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-blue-600 mb-6 border-b-2 border-blue-100 pb-3">Bahagian C: Bina Ayat</h3>
+                        <div class="space-y-6">
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">11. [ sejuk ] [ Korea ] [ sangat ] [ di ] [ Cuaca ]</p><input id="s1-11" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">12. [ suka ] [ bermain ] [ Mereka ] [ salji ]</p><input id="s1-12" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">13. [ musim ] [ Sekarang ] [ panas ] [ ialah ]</p><input id="s1-13" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">14. [ perlu ] [ Kita ] [ payung ] [ membawa ]</p><input id="s1-14" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">15. [ rendah ] [ Suhu ] [ malam ] [ pada ]</p><input id="s1-15" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12"><button onclick="checkAll('s1', ['salji','kemarau','ribut','lembap','suhu','lebih sejuk','paling panas','lebih basah','lebih cantik','lebih lembut','cuaca di korea sangat sejuk','mereka suka bermain salji','sekarang ialah musim panas','kita perlu membawa payung','suhu rendah pada malam'])" class="bg-blue-600 text-white px-10 py-4 rounded-full text-xl font-bold shadow-xl hover:scale-105 transition">Semak Stesen 1 ✨</button><p id="msg-s1" class="mt-6 font-bold hidden text-2xl"></p></div>
+            </div>
+        </section>
+
+        <!-- STESEN 2: BUDAYA -->
+        <section id="stesen2" class="hidden-section w-full bg-white pb-24">
+            <div class="bg-orange-600 text-white py-10 px-6 text-center shadow-lg">
+                <h2 class="text-5xl font-bold">Stesen 2: Budaya & Masyarakat</h2>
+            </div>
+            <div class="max-w-[95rem] mx-auto p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="space-y-10">
+                        <!-- Bhg A -->
+                        <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-200">
+                            <h3 class="text-2xl font-bold text-orange-600 mb-6 border-b-2 border-orange-100 pb-3">Bahagian A: Kosa Kata</h3>
+                            <div class="space-y-4 text-lg">
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">1.</span> Adat resam lama: <select id="s2-1" class="p-2 rounded bg-gray-50 font-bold text-orange-700"><option>.</option><option value="tradisi">tradisi</option><option value="moden">moden</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">2.</span> Pakaian Jepun: <select id="s2-2" class="p-2 rounded bg-gray-50 font-bold text-orange-700"><option>.</option><option value="kimono">Kimono</option><option value="sari">Sari</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">3.</span> Tarian Melayu: <select id="s2-3" class="p-2 rounded bg-gray-50 font-bold text-orange-700"><option>.</option><option value="zapin">Zapin</option><option value="balet">Balet</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">4.</span> Orang tempatan: <select id="s2-4" class="p-2 rounded bg-gray-50 font-bold text-orange-700"><option>.</option><option value="penduduk">penduduk</option><option value="pelancong">pelancong</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">5.</span> Makanan Korea: <select id="s2-5" class="p-2 rounded bg-gray-50 font-bold text-orange-700"><option>.</option><option value="kimchi">Kimchi</option><option value="nasi lemak">Nasi Lemak</option></select>.</div>
+                            </div>
+                        </div>
+                        <!-- Bhg B -->
+                        <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-200">
+                            <h3 class="text-2xl font-bold text-orange-600 mb-6 border-b-2 border-orange-100 pb-3">Bahagian B: Kata Hubung</h3>
+                            <div class="space-y-4 text-lg">
+                                <div class="flex justify-between items-center"><span class="flex-1">6. Saya suka sate ______ pedas.</span> <select id="s2-6" class="p-2 rounded bg-gray-50 font-bold text-orange-700"><option>.</option><option value="walaupun">walaupun</option><option value="supaya">supaya</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">7. Kita belajar bahasa ______ pandai.</span> <select id="s2-7" class="p-2 rounded bg-gray-50 font-bold text-orange-700"><option>.</option><option value="supaya">supaya</option><option value="tetapi">tetapi</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">8. Dia senyum ______ letih.</span> <select id="s2-8" class="p-2 rounded bg-gray-50 font-bold text-orange-700"><option>.</option><option value="walaupun">walaupun</option><option value="kerana">kerana</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">9. Hormati orang ______ harmoni.</span> <select id="s2-9" class="p-2 rounded bg-gray-50 font-bold text-orange-700"><option>.</option><option value="agar">agar</option><option value="jika">jika</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">10. Ramai orang ______ hujan.</span> <select id="s2-10" class="p-2 rounded bg-gray-50 font-bold text-orange-700"><option>.</option><option value="walaupun">walaupun</option><option value="supaya">supaya</option></select></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bhg C -->
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-200 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-orange-600 mb-6 border-b-2 border-orange-100 pb-3">Bahagian C: Bina Ayat</h3>
+                        <div class="space-y-6">
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">11. [ orang ] [ menghormati ] [ Kita ] [ mesti ] [ tua ]</p><input id="s2-11" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">12. [ kaum ] [ Malaysia ] [ pelbagai ] [ ada ]</p><input id="s2-12" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">13. [ pakaian ] [ memakai ] [ Mereka ] [ tradisional ]</p><input id="s2-13" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">14. [ sangat ] [ Makanan ] [ itu ] [ sedap ]</p><input id="s2-14" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">15. [ kawan ] [ Saya ] [ ramai ] [ ada ] [ baru ]</p><input id="s2-15" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12"><button onclick="checkAll('s2', ['tradisi','kimono','zapin','penduduk','kimchi','walaupun','supaya','walaupun','agar','walaupun','kita mesti menghormati orang tua','malaysia ada pelbagai kaum','mereka memakai pakaian tradisional','makanan itu sangat sedap','saya ada ramai kawan baru'])" class="bg-orange-600 text-white px-10 py-4 rounded-full text-xl font-bold shadow-xl hover:scale-105 transition">Semak Stesen 2 ✨</button><p id="msg-s2" class="mt-6 font-bold hidden text-2xl"></p></div>
+            </div>
+        </section>
+
+        <!-- STESEN 3: KEHIDUPAN -->
+        <section id="stesen3" class="hidden-section w-full bg-white pb-24">
+            <div class="bg-teal-600 text-white py-10 px-6 text-center shadow-lg">
+                <h2 class="text-5xl font-bold">Stesen 3: Kehidupan di Luar Negara</h2>
+            </div>
+            <div class="max-w-[95rem] mx-auto p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="space-y-10">
+                        <!-- Bhg A -->
+                        <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-200">
+                            <h3 class="text-2xl font-bold text-teal-600 mb-6 border-b-2 border-teal-100 pb-3">Bahagian A: Tempat Tinggal</h3>
+                            <div class="space-y-4 text-lg">
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">1.</span> Tempat pelajar tinggal: <select id="s3-1" class="p-2 rounded bg-gray-50 font-bold text-teal-700"><option>.</option><option value="asrama">asrama</option><option value="hotel">hotel</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">2.</span> Rumah tinggi (flat): <select id="s3-2" class="p-2 rounded bg-gray-50 font-bold text-teal-700"><option>.</option><option value="pangsapuri">pangsapuri</option><option value="banglo">banglo</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">3.</span> Tempat belajar tinggi: <select id="s3-3" class="p-2 rounded bg-gray-50 font-bold text-teal-700"><option>.</option><option value="universiti">universiti</option><option value="sekolah">sekolah</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">4.</span> Duit negara lain: <select id="s3-4" class="p-2 rounded bg-gray-50 font-bold text-teal-700"><option>.</option><option value="mata wang">mata wang</option><option value="harga">harga</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">5.</span> Cara hidup harian: <select id="s3-5" class="p-2 rounded bg-gray-50 font-bold text-teal-700"><option>.</option><option value="gaya hidup">gaya hidup</option><option value="peraturan">peraturan</option></select>.</div>
+                            </div>
+                        </div>
+                        <!-- Bhg B -->
+                        <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-200">
+                            <h3 class="text-2xl font-bold text-teal-600 mb-6 border-b-2 border-teal-100 pb-3">Bahagian B: Kata Sendi (Prepositions)</h3>
+                            <div class="space-y-4 text-lg">
+                                <div class="flex justify-between items-center"><span class="flex-1">6. Saya tinggal ______ London.</span> <select id="s3-6" class="p-2 rounded bg-gray-50 font-bold text-teal-700"><option>.</option><option value="di">di</option><option value="ke">ke</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">7. Dia pulang ______ sekolah.</span> <select id="s3-7" class="p-2 rounded bg-gray-50 font-bold text-teal-700"><option>.</option><option value="dari">dari</option><option value="pada">pada</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">8. Kami pergi ______ pasar.</span> <select id="s3-8" class="p-2 rounded bg-gray-50 font-bold text-teal-700"><option>.</option><option value="ke">ke</option><option value="di">di</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">9. Kelas bermula ______ pukul 8.</span> <select id="s3-9" class="p-2 rounded bg-gray-50 font-bold text-teal-700"><option>.</option><option value="pada">pada</option><option value="kepada">kepada</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">10. Surat ini ______ ibu.</span> <select id="s3-10" class="p-2 rounded bg-gray-50 font-bold text-teal-700"><option>.</option><option value="daripada">daripada</option><option value="dari">dari</option></select></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bhg C -->
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-200 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-teal-600 mb-6 border-b-2 border-teal-100 pb-3">Bahagian C: Bina Ayat</h3>
+                        <div class="space-y-6">
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">11. [ asrama ] [ tinggal ] [ Saya ] [ di ]</p><input id="s3-11" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">12. [ belajar ] [ Kami ] [ rajin ] [ dengan ]</p><input id="s3-12" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">13. [ rindu ] [ akan ] [ Dia ] [ keluarga ]</p><input id="s3-13" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">14. [ mahal ] [ Kos ] [ hidup ] [ sangat ]</p><input id="s3-14" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">15. [ bas ] [ menaiki ] [ Saya ] [ kuliah ] [ ke ]</p><input id="s3-15" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12"><button onclick="checkAll('s3', ['asrama','pangsapuri','universiti','mata wang','gaya hidup','di','dari','ke','pada','daripada','saya tinggal di asrama','kami belajar dengan rajin','dia rindu akan keluarga','kos hidup sangat mahal','saya menaiki bas ke kuliah'])" class="bg-teal-600 text-white px-10 py-4 rounded-full text-xl font-bold shadow-xl hover:scale-105 transition">Semak Stesen 3 ✨</button><p id="msg-s3" class="mt-6 font-bold hidden text-2xl"></p></div>
+            </div>
+        </section>
+
+        <!-- STESEN 4: PERCUTIAN -->
+        <section id="stesen4" class="hidden-section w-full bg-white pb-24">
+            <div class="bg-purple-600 text-white py-10 px-6 text-center shadow-lg">
+                <h2 class="text-5xl font-bold">Stesen 4: Percutian Impian</h2>
+            </div>
+            <div class="max-w-[95rem] mx-auto p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="space-y-10">
+                        <!-- Bhg A -->
+                        <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-200">
+                            <h3 class="text-2xl font-bold text-purple-600 mb-6 border-b-2 border-purple-100 pb-3">Bahagian A: Kosa Kata Travel</h3>
+                            <div class="space-y-4 text-lg">
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">1.</span> Dokumen perjalanan: <select id="s4-1" class="p-2 rounded bg-gray-50 font-bold text-purple-700"><option>.</option><option value="pasport">pasport</option><option value="buku">buku</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">2.</span> Kebenaran masuk: <select id="s4-2" class="p-2 rounded bg-gray-50 font-bold text-purple-700"><option>.</option><option value="visa">visa</option><option value="resit">resit</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">3.</span> Beg sandang belakang: <select id="s4-3" class="p-2 rounded bg-gray-50 font-bold text-purple-700"><option>.</option><option value="beg galas">beg galas</option><option value="beg tangan">beg tangan</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">4.</span> Hadiah kenangan: <select id="s4-4" class="p-2 rounded bg-gray-50 font-bold text-purple-700"><option>.</option><option value="cenderamata">cenderamata</option><option value="sampah">sampah</option></select>.</div>
+                                <div class="flex items-center gap-2"><span class="w-8 font-bold text-gray-400">5.</span> Orang yang menunjuk jalan: <select id="s4-5" class="p-2 rounded bg-gray-50 font-bold text-purple-700"><option>.</option><option value="pemandu pelancong">pemandu pelancong</option><option value="polis">polis</option></select>.</div>
+                            </div>
+                        </div>
+                        <!-- Bhg B -->
+                        <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-200">
+                            <h3 class="text-2xl font-bold text-purple-600 mb-6 border-b-2 border-purple-100 pb-3">Bahagian B: Kata Bantu (Future/Desire)</h3>
+                            <div class="space-y-4 text-lg">
+                                <div class="flex justify-between items-center"><span class="flex-1">6. Saya ______ ke Paris tahun depan.</span> <select id="s4-6" class="p-2 rounded bg-gray-50 font-bold text-purple-700"><option>.</option><option value="akan">akan</option><option value="sedang">sedang</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">7. Kami ______ melawat muzium.</span> <select id="s4-7" class="p-2 rounded bg-gray-50 font-bold text-purple-700"><option>.</option><option value="ingin">ingin</option><option value="telah">telah</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">8. Mereka ______ membeli tiket.</span> <select id="s4-8" class="p-2 rounded bg-gray-50 font-bold text-purple-700"><option>.</option><option value="mahu">mahu</option><option value="sudah">sudah</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">9. Ali ______ melancong lagi.</span> <select id="s4-9" class="p-2 rounded bg-gray-50 font-bold text-purple-700"><option>.</option><option value="hendak">hendak</option><option value="pernah">pernah</option></select></div>
+                                <div class="flex justify-between items-center"><span class="flex-1">10. Kita ______ merancang cuti.</span> <select id="s4-10" class="p-2 rounded bg-gray-50 font-bold text-purple-700"><option>.</option><option value="mesti">mesti</option><option value="sedang">sedang</option></select></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bhg C -->
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-200 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-purple-600 mb-6 border-b-2 border-purple-100 pb-3">Bahagian C: Bina Ayat</h3>
+                        <div class="space-y-6">
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">11. [ akan ] [ Kami ] [ bercuti ] [ esok ]</p><input id="s4-11" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">12. [ ingin ] [ Saya ] [ dunia ] [ melihat ]</p><input id="s4-12" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">13. [ membeli ] [ Ibu ] [ untuk ] [ cenderamata ] [ kawan ]</p><input id="s4-13" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">14. [ mahal ] [ Tiket ] [ itu ] [ sangat ] [ terbang ]</p><input id="s4-14" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                            <div><p class="font-bold text-gray-500 text-sm mb-1">15. [ gembira ] [ Rasa ] [ sangat ] [ kami ]</p><input id="s4-15" type="text" class="w-full p-3 border-2 rounded-xl" placeholder="Susun ayat..."></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12"><button onclick="checkAll('s4', ['pasport','visa','beg galas','cenderamata','pemandu pelancong','akan','ingin','mahu','hendak','mesti','kami akan bercuti esok','saya ingin melihat dunia','ibu membeli cenderamata untuk kawan','tiket terbang itu sangat mahal','kami rasa sangat gembira'])" class="bg-purple-600 text-white px-10 py-4 rounded-full text-xl font-bold shadow-xl hover:scale-105 transition">Semak Stesen 4 ✨</button><p id="msg-s4" class="mt-6 font-bold hidden text-2xl"></p></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('section').forEach(s => { s.classList.remove('active-section'); s.classList.add('hidden-section'); });
+            document.getElementById(id).classList.remove('hidden-section');
+            document.getElementById(id).classList.add('active-section');
+            window.scrollTo({top:0, behavior:'smooth'});
+        }
+        function checkAll(prefix, answers) {
+            let score = 0;
+            answers.forEach((ans, i) => {
+                let el = document.getElementById(`${prefix}-${i+1}`);
+                if (el) {
+                    let val = el.value.toLowerCase().replace(/[.,]/g,'').trim();
+                    if (val === ans) { score++; el.classList.add('correct'); el.classList.remove('wrong'); }
+                    else { el.classList.add('wrong'); el.classList.remove('correct'); }
+                }
+            });
+            let msg = document.getElementById(`msg-${prefix}`);
+            msg.innerHTML = score === answers.length ? `<span class="text-green-600">🎉 Tahniah! ${score}/${answers.length} Betul!</span>` : `<span class="text-red-500">Cuba lagi. Markah: ${score}/${answers.length}</span>`;
+            msg.classList.remove('hidden');
+        }
+        document.addEventListener('keydown', e => {
+            if (e.key.toLowerCase() === 'f' && !['INPUT','SELECT'].includes(document.activeElement.tagName)) {
+                if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+                else document.exitFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>

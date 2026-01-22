@@ -205,12 +205,12 @@
         <!-- LANDING -->
         <div id="landing-view" class="w-full h-screen flex flex-col justify-center items-center text-center animate-fade-in relative px-10">
             <div class="relative z-10 max-w-5xl">
-                <h2 class="text-9xl font-black mb-6 uppercase tracking-tighter leading-none">Puisi <br>Klasik</h2>
-                <p class="text-3xl font-light mb-16">Menganalisis Ketinggian Budi dan Falsafah Bangsa Melayu.</p>
+                <h2 class="text-9xl font-black mb-6 uppercase tracking-tighter leading-none text-black">Puisi <br>Klasik</h2>
+                <p class="text-3xl font-light mb-16 text-black">Menganalisis Ketinggian Budi dan Falsafah Bangsa Melayu.</p>
                 
                 <div class="flex justify-center space-x-8">
                     <button onclick="switchView('student')" class="px-14 py-6 btn-primary font-black uppercase tracking-widest text-2xl">Mula Meneroka</button>
-                    <button onclick="switchView('teacher')" class="px-14 py-6 bg-transparent border-4 border-black font-black uppercase tracking-widest hover:bg-black hover:text-white transition text-2xl">Portal Guru</button>
+                    <button onclick="switchView('teacher')" class="px-14 py-6 bg-transparent border-4 border-black font-black uppercase tracking-widest hover:bg-black hover:text-white transition text-2xl text-black">Portal Guru</button>
                 </div>
             </div>
         </div>
@@ -221,19 +221,19 @@
                 
                 <div id="student-phase-1" class="w-full max-w-6xl animate-fade-in">
                     <div class="objective-tag">🎯 Objektif: Menganalisis diksi klasik.</div>
-                    <h2 class="text-6xl font-black mb-10 uppercase text-center">Fasa 1: Perbendaharaan Kata</h2>
+                    <h2 class="text-6xl font-black mb-10 uppercase text-center text-black">Fasa 1: Perbendaharaan Kata</h2>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                         <button class="p-8 content-card hover:translate-y-[-5px] transition" onclick="this.style.background='#f0f0f0'">
                             <span class="badge-academic">Alam</span><br>
-                            <b class="text-3xl">Pawana</b><br><small>Angin yang membawa khabar</small>
+                            <b class="text-3xl text-black">Pawana</b><br><small class="text-black">Angin yang membawa khabar</small>
                         </button>
                         <button class="p-8 content-card hover:translate-y-[-5px] transition" onclick="this.style.background='#f0f0f0'">
                             <span class="badge-academic">Sifat</span><br>
-                            <b class="text-3xl">Kencana</b><br><small>Kemuliaan yang berkilau</small>
+                            <b class="text-3xl text-black">Kencana</b><br><small class="text-black">Kemuliaan yang berkilau</small>
                         </button>
                         <button class="p-8 content-card hover:translate-y-[-5px] transition" onclick="this.style.background='#f0f0f0'">
                             <span class="badge-academic">Dunia</span><br>
-                            <b class="text-3xl">Mayapada</b><br><small>Dunia sebagai tempat singgah</small>
+                            <b class="text-3xl text-black">Mayapada</b><br><small class="text-black">Dunia sebagai tempat singgah</small>
                         </button>
                     </div>
                     <div class="flex justify-center mb-10">
@@ -244,14 +244,14 @@
                 <div id="student-phase-2" class="hidden w-full max-w-4xl mx-auto animate-fade-in mb-20">
                     <div class="objective-tag">🎯 Objektif: Menghasilkan karya asli.</div>
                     <div class="content-card p-12 space-y-10">
-                        <h2 class="text-5xl font-black uppercase border-b-4 border-black pb-4 text-center">Menjana Karya</h2>
-                        <input type="text" id="namaPelajar" class="w-full text-4xl font-black input-flat" placeholder="Nama Anda">
-                        <textarea id="mesejPelajar" rows="4" class="w-full text-5xl font-serif italic input-flat" placeholder="Tulis rangkap anda..."></textarea>
-                        <div class="p-6 bg-gray-100 font-bold border-2 border-black text-lg">
+                        <h2 class="text-5xl font-black uppercase border-b-4 border-black pb-4 text-center text-black">Menjana Karya</h2>
+                        <input type="text" id="namaPelajar" class="w-full text-4xl font-black input-flat text-black" placeholder="Nama Anda">
+                        <textarea id="mesejPelajar" rows="4" class="w-full text-5xl font-serif italic input-flat text-black" placeholder="Tulis rangkap anda..."></textarea>
+                        <div class="p-6 bg-gray-100 font-bold border-2 border-black text-lg text-black">
                             💡 Tip: Gunakan teknik "Asonansi" (vokal serupa).
                         </div>
                         <button id="btnHantar" onclick="hantarData()" class="btn-primary w-full py-8 text-3xl uppercase tracking-widest">Terbit Karya 🚀</button>
-                        <div id="statusMsg" class="hidden text-center font-bold text-2xl">✅ Berjaya Diterbitkan!</div>
+                        <div id="statusMsg" class="hidden text-center font-bold text-2xl text-black">✅ Berjaya Diterbitkan!</div>
                     </div>
                 </div>
             </div>
@@ -270,16 +270,16 @@
                     <div class="slide active" id="slide-1">
                         <div class="objective-tag">🎯 Fokus Hari Ini</div>
                         <div class="content-wrap max-w-4xl w-full">
-                            <h2 class="text-8xl font-black mb-10 uppercase text-center">LO & SC</h2>
+                            <h2 class="text-8xl font-black mb-10 uppercase text-center text-black">LO & SC</h2>
                             <div class="content-card space-y-8">
                                 <div>
-                                    <h4 class="text-3xl font-bold mb-2 uppercase">Objektif (LO):</h4>
-                                    <p class="text-2xl">Menganalisis kiasan pantun & syair serta teknik bunyi.</p>
+                                    <h4 class="text-3xl font-bold mb-2 uppercase text-black">Objektif (LO):</h4>
+                                    <p class="text-2xl text-black">Menganalisis kiasan pantun & syair serta teknik bunyi.</p>
                                 </div>
                                 <hr class="border-black border-2">
                                 <div>
-                                    <h4 class="text-3xl font-bold mb-2 uppercase">Kriteria (SC):</h4>
-                                    <ul class="text-2xl list-disc list-inside">
+                                    <h4 class="text-3xl font-bold mb-2 uppercase text-black">Kriteria (SC):</h4>
+                                    <ul class="text-2xl list-disc list-inside text-black">
                                         <li>Beza Pembayang & Maksud.</li>
                                         <li>Kenal pasti Asonansi & Aliterasi.</li>
                                         <li>Cipta satu rangkap puisi yang estetik.</li>
@@ -294,17 +294,17 @@
                         <div class="objective-tag">🎯 Struktur Pantun</div>
                         <div class="content-wrap grid grid-cols-2 gap-10 items-center w-full">
                             <div class="space-y-6 text-left">
-                                <h2 class="text-7xl font-black uppercase">Logik Alam</h2>
+                                <h2 class="text-7xl font-black uppercase text-black">Logik Alam</h2>
                                 <div class="content-card">
-                                    <h4 class="text-2xl font-bold uppercase mb-2">Pembayang:</h4>
-                                    <p class="text-2xl">Penyediaan suasana emosi dan rima sebelum maksud disampaikan.</p>
+                                    <h4 class="text-2xl font-bold uppercase mb-2 text-black">Pembayang:</h4>
+                                    <p class="text-2xl text-black">Penyediaan suasana emosi dan rima sebelum maksud disampaikan.</p>
                                 </div>
-                                <div class="p-6 bg-gray-100 border-4 border-black font-bold text-xl">
+                                <div class="p-6 bg-gray-100 border-4 border-black font-bold text-xl text-black">
                                     "Alam mengajar tentang manusia."
                                 </div>
                             </div>
                             <div class="content-card">
-                                <p class="poem-display text-center">
+                                <p class="poem-display text-center text-black">
                                     Pisang emas dibawa belayar,<br>
                                     Masak sebiji di atas peti;<br>
                                     <span class="font-black underline">Hutang emas boleh dibayar,<br>
@@ -318,21 +318,21 @@
                     <div class="slide" id="slide-3">
                         <div class="objective-tag">🎯 Teknikal Aras Tinggi</div>
                         <div class="content-wrap max-w-5xl w-full">
-                            <h2 class="text-7xl font-black mb-10 uppercase text-center">Tekstur Bunyi</h2>
+                            <h2 class="text-7xl font-black mb-10 uppercase text-center text-black">Tekstur Bunyi</h2>
                             <div class="grid grid-cols-2 gap-10 text-left">
                                 <div class="content-card">
                                     <div class="term-box">
-                                        <h4 class="text-3xl font-black uppercase">Asonansi</h4>
-                                        <p class="text-xl">Pengulangan bunyi **Vokal** (a, e, i, o, u) yang sama dalam baris.</p>
+                                        <h4 class="text-3xl font-black uppercase text-black">Asonansi</h4>
+                                        <p class="text-xl text-black">Pengulangan bunyi **Vokal** (a, e, i, o, u) yang sama dalam baris.</p>
                                     </div>
-                                    <p class="text-lg italic font-bold">"Pisang em<span class="underline">a</span>s dib<span class="underline">a</span>w<span class="underline">a</span> bel<span class="underline">a</span>y<span class="underline">a</span>r"</p>
+                                    <p class="text-lg italic font-bold text-black">"Pisang em<span class="underline">a</span>s dib<span class="underline">a</span>w<span class="underline">a</span> bel<span class="underline">a</span>y<span class="underline">a</span>r"</p>
                                 </div>
                                 <div class="content-card">
                                     <div class="term-box">
-                                        <h4 class="text-3xl font-black uppercase">Aliterasi</h4>
-                                        <p class="text-xl">Pengulangan bunyi **Konsonan** yang sama di awal/tengah kata.</p>
+                                        <h4 class="text-3xl font-black uppercase text-black">Aliterasi</h4>
+                                        <p class="text-xl text-black">Pengulangan bunyi **Konsonan** yang sama di awal/tengah kata.</p>
                                     </div>
-                                    <p class="text-lg italic font-bold">"<span class="underline">M</span>asak se<span class="underline">m</span>asak di atas peti"</p>
+                                    <p class="text-lg italic font-bold text-black">"<span class="underline">M</span>asak se<span class="underline">m</span>asak di atas peti"</p>
                                 </div>
                             </div>
                         </div>
@@ -344,7 +344,7 @@
                         <div class="content-wrap grid grid-cols-2 gap-10 items-center w-full">
                             <div class="content-card border-l-[30px] border-black">
                                 <span class="badge-academic">Naratif</span>
-                                <p class="poem-display text-center">
+                                <p class="poem-display text-center text-black">
                                     Dengarlah kisah suatu riwayat,<br>
                                     Raja di desa negeri Kembayat,<br>
                                     Dikarang fakir dijadikan hikayat,<br>
@@ -352,9 +352,9 @@
                                 </p>
                             </div>
                             <div class="space-y-6 text-left">
-                                <h2 class="text-7xl font-black uppercase">Syair</h2>
+                                <h2 class="text-7xl font-black uppercase text-black">Syair</h2>
                                 <div class="content-card">
-                                    <ul class="space-y-4 text-2xl font-bold">
+                                    <ul class="space-y-4 text-2xl font-bold text-black">
                                         <li>✅ Rima Monoton (a-a-a-a).</li>
                                         <li>✅ Tiada Pembayang.</li>
                                         <li>✅ Fokus Kronologi Sejarah.</li>
@@ -368,15 +368,15 @@
                     <div class="slide" id="slide-5">
                         <div class="objective-tag">🎯 Falsafah Diksi</div>
                         <div class="content-wrap max-w-5xl text-left w-full">
-                            <h2 class="text-7xl font-black mb-10 uppercase text-center">Simbolisme Alam</h2>
+                            <h2 class="text-7xl font-black mb-10 uppercase text-center text-black">Simbolisme Alam</h2>
                             <div class="content-card grid grid-cols-2 gap-10">
                                 <div>
-                                    <h4 class="text-3xl font-black uppercase mb-4 underline">Pisang Emas</h4>
-                                    <p class="text-xl">Simbol kepada sesuatu yang **bernilai** tetapi fizikalnya kecil. Menunjukkan betapa 'budi' itu sangat berat timbangannya.</p>
+                                    <h4 class="text-3xl font-black uppercase mb-4 underline text-black">Pisang Emas</h4>
+                                    <p class="text-xl text-black">Simbol kepada sesuatu yang **bernilai** tetapi fizikalnya kecil. Menunjukkan betapa 'budi' itu sangat berat timbangannya.</p>
                                 </div>
                                 <div>
-                                    <h4 class="text-3xl font-black uppercase mb-4 underline">Lazuardi / Kencana</h4>
-                                    <p class="text-xl">Penggunaan warna dan material mulia untuk menunjukkan kualiti pemikiran penyair yang tinggi.</p>
+                                    <h4 class="text-3xl font-black uppercase mb-4 underline text-black">Lazuardi / Kencana</h4>
+                                    <p class="text-xl text-black">Penggunaan warna dan material mulia untuk menunjukkan kualiti pemikiran penyair yang tinggi.</p>
                                 </div>
                             </div>
                         </div>
@@ -385,8 +385,8 @@
                     <!-- Slide 6: Misi -->
                     <div class="slide" id="slide-6">
                         <div class="content-wrap w-full">
-                            <h2 class="text-9xl font-black mb-12 uppercase tracking-tighter text-center">MULA <br>MENCIPTA</h2>
-                            <p class="text-4xl mb-16 max-w-4xl text-center mx-auto">Gunakan iPad anda. Terjemahkan budi dalam rima.</p>
+                            <h2 class="text-9xl font-black mb-12 uppercase tracking-tighter text-center text-black">MULA <br>MENCIPTA</h2>
+                            <p class="text-4xl mb-16 max-w-4xl text-center mx-auto text-black">Gunakan iPad anda. Terjemahkan budi dalam rima.</p>
                             <div class="flex justify-center">
                                 <button onclick="toggleTeacherSection('live')" class="btn-primary px-20 py-8 text-3xl uppercase tracking-widest shadow-xl">Buka Galeri →</button>
                             </div>
@@ -403,14 +403,14 @@
                 <div class="relative z-10 pt-10 px-10 max-w-7xl mx-auto">
                     <div class="flex justify-between items-center mb-12 bg-white px-12 py-12 border-4 border-black shadow-[15px_15px_0px_#000]">
                         <div>
-                            <h2 class="text-6xl font-black uppercase">Galeri 📡</h2>
-                            <p class="text-2xl mt-3 font-bold">Hasil Kreativiti Murid (Live Feed).</p>
+                            <h2 class="text-6xl font-black uppercase text-black">Galeri 📡</h2>
+                            <p class="text-2xl mt-3 font-bold text-black">Hasil Kreativiti Murid (Live Feed).</p>
                         </div>
                         <div class="flex items-center space-x-8">
                             <button id="btnSimulasi" onclick="runSimulation()" class="hidden text-xl btn-primary px-10 py-5 uppercase">Demo</button>
                             <div class="flex items-center bg-white px-10 py-5 border-4 border-black">
                                 <div id="live-indicator" class="w-6 h-6 bg-red-600 rounded-full animate-pulse mr-5"></div>
-                                <span class="font-black tracking-widest text-2xl uppercase" id="status-text">OFFLINE</span>
+                                <span class="font-black tracking-widest text-2xl uppercase text-black" id="status-text">Menyambung...</span>
                             </div>
                         </div>
                     </div>
@@ -422,7 +422,14 @@
     </main>
 
     <script>
+        /**
+         * Neil, pastikan URL di bawah adalah URL Web App yang telah dideploy (Latest).
+         * Pastikan tetapan Web App adalah:
+         * 1. Execute as: Me
+         * 2. Who has access: Anyone
+         */
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwc57DNc1OlvOiXZx_gQ7JZabJJ_-tzp7ZwdYkjohzyoiWdmkiOUMvzCc6JmlHyN_c-/exec';
+        
         let currentSlide = 1;
         const totalSlides = 6;
         let existingDataCount = 0;
@@ -443,7 +450,6 @@
             document.getElementById('teacher-view').classList.add('hidden');
             document.getElementById('teacher-tabs').classList.add('hidden');
 
-            // Scroll back to top when switching view
             window.scrollTo(0,0);
 
             if (viewName === 'student') {
@@ -494,7 +500,7 @@
                 document.getElementById(`slide-${nextSlide}`).classList.add('active');
                 currentSlide = nextSlide;
                 updateSlideDots();
-                window.scrollTo(0,0); // Skrol ke atas setiap kali tukar slide
+                window.scrollTo(0,0);
             }
         }
 
@@ -533,6 +539,10 @@
                 btn.innerText = "HANTAR LAGI 🚀"; btn.disabled = false;
                 status.classList.remove('hidden');
                 setTimeout(() => status.classList.add('hidden'), 5000);
+            }).catch(err => {
+                console.error(err);
+                alert("Ralat penghantaran. Pastikan skrip dideploy sebagai Web App (Anyone).");
+                btn.innerText = "CUBA LAGI"; btn.disabled = false;
             });
         }
 
@@ -546,26 +556,30 @@
             if (simulationMode) return;
             const indicator = document.getElementById('live-indicator');
             const statusText = document.getElementById('status-text');
-            fetch(`${SCRIPT_URL}?t=${Date.now()}`).then(r => r.json()).then(data => {
-                indicator.className = "w-6 h-6 bg-green-500 rounded-full animate-pulse mr-5";
-                statusText.innerText = "ONLINE";
-                if (data.length > existingDataCount) { renderCards(data); existingDataCount = data.length; }
-            }).catch(() => {
-                indicator.className = "w-6 h-6 bg-red-600 rounded-full animate-pulse mr-5";
-                statusText.innerText = "OFFLINE";
-                document.getElementById('btnSimulasi').classList.remove('hidden');
-            });
+            
+            fetch(`${SCRIPT_URL}?t=${Date.now()}`)
+                .then(r => r.json())
+                .then(data => {
+                    indicator.className = "w-6 h-6 bg-green-500 rounded-full animate-pulse mr-5";
+                    statusText.innerText = "ONLINE";
+                    if (data.length > existingDataCount) { renderCards(data); existingDataCount = data.length; }
+                })
+                .catch(() => {
+                    indicator.className = "w-6 h-6 bg-red-600 rounded-full animate-pulse mr-5";
+                    statusText.innerText = "OFFLINE";
+                    document.getElementById('btnSimulasi').classList.remove('hidden');
+                });
         }
 
         function renderCards(data) {
             const container = document.getElementById('card-container');
             container.innerHTML = data.slice().reverse().map((row, i) => {
                 return `<div class="content-card p-12 border-l-[25px] border-black animate-pop shadow-[15px_15px_0px_#000]">
-                    <div class="flex justify-between items-center mb-8 border-b-2 border-black pb-4">
+                    <div class="flex justify-between items-center mb-8 border-b-2 border-black pb-4 text-black">
                         <h3 class="font-black text-3xl uppercase tracking-tighter">${row[1]}</h3>
                         <span class="text-sm font-mono font-bold">${new Date(row[0]).toLocaleTimeString()}</span>
                     </div>
-                    <p class="text-4xl italic text-center font-serif leading-loose">${row[2]}</p>
+                    <p class="text-4xl italic text-center font-serif leading-loose text-black">${row[2]}</p>
                 </div>`;
             }).join('');
         }

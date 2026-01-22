@@ -423,12 +423,9 @@
 
     <script>
         /**
-         * Neil, pastikan URL di bawah adalah URL Web App yang telah dideploy (Latest).
-         * Pastikan tetapan Web App adalah:
-         * 1. Execute as: Me
-         * 2. Who has access: Anyone
+         * Neil, SCRIPT_URL telah dikemas kini dengan pautan baharu anda.
          */
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwc57DNc1OlvOiXZx_gQ7JZabJJ_-tzp7ZwdYkjohzyoiWdmkiOUMvzCc6JmlHyN_c-/exec';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzwMQSFxtTdIlzooGj__a21eRilBfX1teZUOyRr0N4GijowiaEtLi9ijFNCwL6FJMWI/exec';
         
         let currentSlide = 1;
         const totalSlides = 6;
@@ -533,15 +530,22 @@
             const status = document.getElementById('statusMsg');
             if (!nama || !mesej) return alert("Sila isi profil anda!");
             btn.innerText = "MENGHANTAR..."; btn.disabled = true;
-            fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify({ nama, mesej }) })
+            
+            fetch(SCRIPT_URL, { 
+                method: 'POST', 
+                mode: 'no-cors', 
+                cache: 'no-cache',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nama, mesej }) 
+            })
             .then(() => {
                 document.getElementById('mesejPelajar').value = "";
                 btn.innerText = "HANTAR LAGI 🚀"; btn.disabled = false;
                 status.classList.remove('hidden');
                 setTimeout(() => status.classList.add('hidden'), 5000);
             }).catch(err => {
-                console.error(err);
-                alert("Ralat penghantaran. Pastikan skrip dideploy sebagai Web App (Anyone).");
+                console.error("Ralat Hantar:", err);
+                alert("Gagal menghantar. Pastikan Google Script anda dideploy sebagai 'Anyone'.");
                 btn.innerText = "CUBA LAGI"; btn.disabled = false;
             });
         }
@@ -562,9 +566,13 @@
                 .then(data => {
                     indicator.className = "w-6 h-6 bg-green-500 rounded-full animate-pulse mr-5";
                     statusText.innerText = "ONLINE";
-                    if (data.length > existingDataCount) { renderCards(data); existingDataCount = data.length; }
+                    if (data && data.length > existingDataCount) { 
+                        renderCards(data); 
+                        existingDataCount = data.length; 
+                    }
                 })
-                .catch(() => {
+                .catch(err => {
+                    console.error("Ralat Fetch:", err);
                     indicator.className = "w-6 h-6 bg-red-600 rounded-full animate-pulse mr-5";
                     statusText.innerText = "OFFLINE";
                     document.getElementById('btnSimulasi').classList.remove('hidden');
